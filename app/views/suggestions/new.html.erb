@@ -1,0 +1,18 @@
+<h1>Have a new suggestion?</h1>
+
+<%= form_for @suggestion do |f| %>
+  <%= f.label :user_id %>:
+  <%= f.text_field :user_id %><br />
+
+  <%= f.label :overview %>:
+  <%= f.text_field :overview %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br />
+
+  <br/>
+  <%= f.submit %>
+<% end %>

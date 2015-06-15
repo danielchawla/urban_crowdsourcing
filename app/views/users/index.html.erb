@@ -1,0 +1,14 @@
+<h1>Here's a list of all the users</h1>
+<br/>
+
+<ol>
+<% @users.each do |user| %>
+	<li>First Name: <%= user.first_name %><br/>
+	Last Name: <%= user.last_name %><br/>
+	Age: <%= user.age %><br/>
+	Occupation: <%= user.occupation %><br/>
+	Gender: <%= user.gender %></li><br/>
+	<br/>
+<% end %>
+</ul>
+<or/>

@@ -1,2 +1,17 @@
 <h1>Welcome to this website</h1>
+<br/>
+<br/>
 
+<h2>Here are all the suggestions:</h2>
+<br/>
+
+<ol>
+
+<% @suggestions.each do |suggestion| %>
+	<li>User ID: <%= suggestion.user_id %><br/>
+	Overview: <%= suggestion.overview %><br/>
+	Location: <%= suggestion.location %><br/>
+	Description: <%= suggestion.description %></li><br/>
+<% end %>
+</ol>
+<br/>
