@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
+  
+
   devise_for :users
+ # devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -21,8 +25,8 @@ Rails.application.routes.draw do
 
   post 'users' => 'users#create'
 
-  # resources :users, :only => [:show, :index, :create, :new, :edit]
-  # resources :suggestions, :only => [:show, :index, :create, :new, :edit]
+  resources :users, :only => [:show, :index, :create, :new, :edit]
+  resources :suggestions, :only => [:show, :index, :create, :new, :edit]
 
 
   # Example of regular route:

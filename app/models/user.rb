@@ -1,12 +1,13 @@
 class User < ActiveRecord::Base
-<<<<<<< HEAD
+
+
+
 	has_many :suggestions, :dependent => :destroy
-=======
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
->>>>>>> 690b7b38eb4801dacb571123fa04b488362ca470
 
 	validates :first_name, :presence => true
 	validates :last_name, :presence => true
@@ -15,7 +16,7 @@ class User < ActiveRecord::Base
 	validates :gender, :presence => true
 end
 
-
+ 
 
   # create_table "users", force: :cascade do |t|
   #   t.string   "first_name"
