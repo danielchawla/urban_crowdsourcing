@@ -1,0 +1,23 @@
+ $primary-color: #53A2BE;
+ $secondary-color: #243D76;
+ $font-color: #0A2239;
+
+ @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+
+ body {
+ 	padding: 0;
+ 	margin: 0;
+ 	background-color: $secondary-color;
+ 	font-family: 'PT Serif', serif;
+ 	color: $font-color;
+ }
+
+#container {
+	background-color: $primary-color;
+	width: 500px;
+	margin: 0 auto;
+	border-left: 1px solid $primary-color;
+	border-left: 1px solid $primary-color;
+	padding: 15px;
+	color: $font-color;
+}

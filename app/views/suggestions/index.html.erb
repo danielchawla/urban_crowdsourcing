@@ -1,6 +1,9 @@
-<h1>Welcome to this website</h1>
+<h1>Welcome to Urban Crowdsource</h1>
 <br/>
-<br/>
+
+<%= link_to 'New Suggestion', suggestions_new_path %><br/><br/>
+
+<%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
 
 <h2>Here are all the suggestions:</h2>
 <br/>
@@ -8,7 +11,7 @@
 <ol>
 
 <% @suggestions.each do |suggestion| %>
-	<li>User ID: <%= suggestion.user_id %><br/>
+	<li>First Name: <%= suggestion.user.first_name %><br/>
 	Overview: <%= suggestion.overview %><br/>
 	Location: <%= suggestion.location %><br/>
 	Description: <%= suggestion.description %></li><br/>

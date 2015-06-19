@@ -1,0 +1,26 @@
+<% if suggestion.errors.any? %>
+<div id="error_explanation">
+  <h4><%= pluralize(@suggestion.errors.count, " error") %> prohibited this suggestion from being saved:</h4>
+
+  <ul>
+    <% suggestion.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<%= form_for suggestion do |f| %>
+  <%= f.label :overview %>:
+  <%= f.text_field :overview %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_field :description %><br />
+
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br />
+
+  <br/>
+  <%= f.submit %>
+<% end %>
+

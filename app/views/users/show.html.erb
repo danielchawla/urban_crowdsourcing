@@ -1,0 +1,28 @@
+<h1><%= @user.first_name %>'s Profile</h1>
+<div id="profile">
+	<table>
+		<tr>
+			<td>
+				<div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
+				<div>Age: <%= @user.age %></div>
+				<div>Occupation: <%= @user.occupation %></div>
+				<div>Gender: <%= @user.gender %></div>
+			</td>
+		</tr>
+	</table>
+</div>
+<br/>
+<br/>
+
+<div id="user_suggestions">
+<table>
+<% @suggestions.each do |suggestion| %>
+	<tr>
+		<td>First Name: <%= suggestion.user.first_name %><br/>
+		Overview: <%= suggestion.overview %><br/>
+		Location: <%= suggestion.location %><br/>
+		Description: <%= suggestion.description %><br/></td>
+	</tr>
+<% end %>
+</table>
+<br/>

@@ -1,23 +1,17 @@
 <h1>Create New User</h1>
 
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@user.errors.count, " error") %> prohibited this user from being saved:</h4>
+
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <!-- need to add devise -->
 
-<%= form_for @user do |f| %>
-  <%= f.label :first_name %>:
-  <%= f.text_field :first_name %><br />
-
-  <%= f.label :last_name %>:
-  <%= f.text_field :last_name %><br />
-
-  <%= f.label :age %>:
-  <%= f.text_field :age %><br />
-
-  <%= f.label :occupation %>:
-  <%= f.text_field :occupation %><br />
-
-  <%= f.label :gender %>:
-  <%= f.text_field :gender %><br />
-
-  <br/>
-  <%= f.submit %>
-<% end %>
+<%= render :partial => 'form', :locals => {:user => @user} %>

@@ -3,9 +3,6 @@ class UsersController < ApplicationController
 		@users = User.all
 	end
 
-	def show
-	end
-
   	def new
     	@user = User.new
   	end
@@ -13,7 +10,21 @@ class UsersController < ApplicationController
 	def create
 		@user = User.create(params["user"].permit(:first_name, :last_name, :age, :occupation, :gender))
 		@user.save
+		
+		if @user.save
+			redirect_to '/users'
+		else
+			render :new
+		end	
+	end
 
-		redirect_to '/users/'
+	def show
+		@user = User.find(params[:id])
+		@suggestions = @user.suggestions
+	end
+
+
+
+	def edit
 	end
 end

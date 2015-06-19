@@ -7,13 +7,21 @@ Rails.application.routes.draw do
 
   get 'suggestions' => 'suggestions#index'
   get 'suggestions/new' => 'suggestions#new'
+  get 'suggestions/edit' => 'suggestions#edit'
+  get 'suggestions/map' => 'suggestions#map'
+  get 'suggestions/:id' => 'suggestions#show'
 
   post 'suggestions' => 'suggestions#create'
 
   get 'users' => 'users#index'
   get 'users/new' => 'users#new'
+  get 'users/edit' => 'users#edit'
+  get 'users/:id' => 'users#show'
 
   post 'users' => 'users#create'
+
+  # resources :users, :only => [:show, :index, :create, :new, :edit]
+  # resources :suggestions, :only => [:show, :index, :create, :new, :edit]
 
 
   # Example of regular route:
