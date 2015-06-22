@@ -10,8 +10,9 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-	#	@suggestion = Suggestion.find(params[:suggestion_id])
-		@comment = @suggestion.comments.new(params[:text]).permit(:text)
+		@suggestion = Suggestion.find(params[:suggestion_id])
+		
+		@comment = @suggestion.comments.new(params["comment"].permit(:text))
 		@comment.user = current_user
 		@comment.user_id=current_user.id
 		
@@ -27,3 +28,4 @@ class CommentsController < ApplicationController
 
 
 end
+ 

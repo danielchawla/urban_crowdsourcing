@@ -4,3 +4,12 @@ Overview: <%= suggestion.overview %><br/>
 First Name: <%= suggestion.user.first_name %><br/>
 Location: <%= suggestion.location %><br/>
 Description: <%= suggestion.description %><br/>
+
+<br/>
+Replies: 
+
+<%= link_to "New Comment" , new_suggestion_comment_path(suggestion) %>
+<% suggestion.comments.each do |comment|%>
+<br/>
+<%= comment.text %>
+<%end%>
