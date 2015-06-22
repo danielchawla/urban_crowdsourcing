@@ -1,29 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head>
-<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <title>Urban Crowdsource</title>
 
- 
-
-
-
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<div id="container">
-	<%= yield %>
+<html lang="en">
+	<head>
+		<p class="notice"><%= notice %></p>
+	  	<p class="alert"><%= alert %></p>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
 
 
-<br/>
+	    <!-- Bootstrap Core CSS -->
+	<!--     <link href="bootstrap.min.css" rel="stylesheet"> -->
 
-<footer>Copyright Urban Crowdsource 2015</footer>
-</div>
+	    <!-- Custom CSS -->
+	    <link href="application" rel="stylesheet">
 
-</body>
+	    <!-- Custom Fonts -->
+	    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	  
+	  	<title>Urban Crowdsource</title>
+
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag 'bootstrap.in', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+
+
+	<body>
+		<!-- Navigation -->
+	    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+	    <nav id="sidebar-wrapper">
+	        <ul class="sidebar-nav">
+	            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+	            <li class="sidebar-brand">
+	                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+	            </li>
+	            <li>
+	                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+	            </li>
+	            <li>
+	                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+	            </li>
+	            <li>
+	                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+	            </li>
+	            <li>
+	                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+	            </li>
+	            <li>
+	                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+	            </li>
+	        </ul>
+	    </nav>
+
+
+		<!-- Content from other pages -->
+		<div id="container">
+			<%= yield %>
+
+
+	<br/>
+
+	<footer>Copyright Urban Crowdsource 2015</footer>
+	</div>
+
+	</body>
 </html>
  
