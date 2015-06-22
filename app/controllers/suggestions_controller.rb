@@ -14,8 +14,9 @@ class SuggestionsController < ApplicationController
 	end
 
 	def create
+	 
 		@suggestion = Suggestion.new(params["suggestion"].permit(:user_id, :overview, :description, :location))
-		@suggestion.user = User.last
+		@suggestion.user = current_user
 		if @suggestion.save
 			redirect_to '/suggestions'
 		else

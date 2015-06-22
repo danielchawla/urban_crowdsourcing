@@ -11,10 +11,9 @@
 <ol>
 
 <% @suggestions.each do |suggestion| %>
-	<li>First Name: <%= suggestion.user.first_name %><br/>
-	Overview: <%= suggestion.overview %><br/>
-	Location: <%= suggestion.location %><br/>
-	Description: <%= suggestion.description %></li><br/>
+
+
+	<li><%=render partial: "suggestion", locals: {suggestion: suggestion}%><br/>
 <% end %>
 </ol>
 <br/>

@@ -26,7 +26,9 @@ Rails.application.routes.draw do
   post 'users' => 'users#create'
 
   resources :users, :only => [:show, :index, :create, :new, :edit]
-  resources :suggestions, :only => [:show, :index, :create, :new, :edit]
+  resources :suggestions, :only => [:show, :index, :create, :new, :edit] do
+     resources :comments, :only => [:index, :new, :create]
+   end
 
 
   # Example of regular route:

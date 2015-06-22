@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
 
 	has_many :suggestions, :dependent => :destroy
+  has_many :comments #TODO: make dependency look good
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

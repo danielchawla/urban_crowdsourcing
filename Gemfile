@@ -5,7 +5,7 @@ gem 'devise', '~> 3.5.1'
 
 gem 'paperclip', '~> 4.2'
 
-
+gem 'quiet_assets', group: :development
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
