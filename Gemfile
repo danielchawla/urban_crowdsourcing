@@ -53,7 +53,7 @@ group :development, :test do
 
   gem 'bootstrap-sass', '~> 3.3.5' 
 
-  gem 'quiet_assets', group: :development
+  gem 'quiet_assets'
 
   gem 'pry-byebug'
 
