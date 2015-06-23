@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 
+<% if user_signed_in? %>
+<%= link_to "Logout" , destroy_user_session_path, :method => 'DELETE' %>
+<% else %>
+<%= link_to "Sign in" , new_user_session_path  %> 
+<%= link_to "Sign up" , new_user_registration_path %> 
+<%end%>
+
+
 <html lang="en">
 	<head>
 <!-- 		<p class="notice"><%= notice %></p>

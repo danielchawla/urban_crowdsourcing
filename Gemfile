@@ -1,13 +1,6 @@
 source 'https://rubygems.org'
 
-#Developer-added gems
-gem 'devise', '~> 3.5.1'
 
-gem 'paperclip', '~> 4.2'
-
-gem 'bootstrap-sass', '~> 3.3.5' 
-
-gem 'quiet_assets', group: :development
 
 
 
@@ -44,8 +37,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry-byebug'
+  
+  
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -53,10 +46,19 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
- 
+ #Developer-added gems
+  gem 'devise', '~> 3.5.1'
 
-  # gem 'devise'
+  gem 'paperclip', '~> 4.2'
+
+  gem 'bootstrap-sass', '~> 3.3.5' 
+
+  gem 'quiet_assets'
+
+  gem 'pry-byebug'
+
   gem 'gmaps4rails'
+  
   gem 'underscore-rails'
 
 end
