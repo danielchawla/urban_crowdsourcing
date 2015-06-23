@@ -184,14 +184,28 @@ hr.small {
     padding: 50px 0;
 }
 
+
 /* Latest Suggestions */
 
 .latest-suggestions {
     padding: 50px 0;
+    h1{
+        font-size: 36px;
+    }
 }
 
-.service-item {
+.suggestions-item {
     margin-bottom: 30px;
+    h4 {
+        height: 30px;
+        line-height: 30px;
+        overflow: hidden;
+    }
+    p {
+        height: 140px;
+        line-height:20px;
+        overflow: hidden;   
+    }
 }
 
 /* Callout */
@@ -232,6 +246,9 @@ hr.small {
 
 .call-to-action {
     padding: 50px 0;
+    h1{
+        font-size: 36px;
+    }
 }
 
 .call-to-action .btn {

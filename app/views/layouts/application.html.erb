@@ -41,13 +41,13 @@
 	                <a href="/" onclick = $("#menu-close").click(); >Home</a>
 	            </li>
 	            <li>
-	                <a href="/#about" onclick = $("#menu-close").click(); >About</a>
+	                <a href="/#about" onclick = $("#menu-close").click(); >How it Works</a>
 	            </li>
 	            <li>
-	                <a href="/#services" onclick = $("#menu-close").click(); >Services</a>
+	                <a href="/#latest-suggestions" onclick = $("#menu-close").click(); >Latest Suggestions</a>
 	            </li>
 	            <li>
-	                <a href="/#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+	                <a href="/#our-team" onclick = $("#menu-close").click(); >Our Team</a>
 	            </li>
 	            <li>
 	                <a href="/#contact" onclick = $("#menu-close").click(); >Contact</a>
@@ -77,7 +77,7 @@
 			<%= link_to "Sign up" , new_user_registration_path %> 
 		<%end%> -->
 
-
+		<!-- Import content from other places with yield -->
 		<% if params[:controller] != "main" %>
 			<header id="top" class="section bg-primary">
 			    <div class="container">
