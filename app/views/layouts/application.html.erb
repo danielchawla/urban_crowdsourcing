@@ -56,7 +56,9 @@
 	                <a href="/suggestions" onclick = $("#menu-close").click(); >Suggestions</a>
 	            </li>
 	            <li>
+	            	<%if user_signed_in?%>
 	                <a href="<%= user_path current_user.id %>" onclick = $("#menu-close").click(); >Your Account</a>
+	                <%end%>
 	            </li>
 	        </ul>
 	    </nav>
