@@ -7,7 +7,7 @@ class Suggestion < ActiveRecord::Base
 		validates :description, :presence => true
 
 
-	geocoded_by :address, :latitude  => :lat, :longitude => :lon
+	geocoded_by :location, :latitude  => :lat, :longitude => :lon
 	# geocoded_by :full_street_address   # can also be an IP address
 	after_validation :geocode          # auto-fetch coordinates
 
