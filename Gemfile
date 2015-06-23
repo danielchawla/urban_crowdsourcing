@@ -63,5 +63,7 @@ group :development, :test do
 
   gem "font-awesome-rails"
 
+  gem 'geocoder'
+
 end
 

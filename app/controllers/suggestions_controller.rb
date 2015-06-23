@@ -3,7 +3,7 @@ class SuggestionsController < ApplicationController
 	before_action :authenticate_user!, :only => [:new, :create]
 
 	before_action :load_suggestions, :only => [:index, :create]
-	before_action :load_new_suggstion, :only => [:index, :new]
+	before_action :load_new_suggestion, :only => [:index, :new]
 
 	def index
 		# @suggestion = Suggestion.new
@@ -15,7 +15,7 @@ class SuggestionsController < ApplicationController
 
 	def create
 	 
-		@suggestion = Suggestion.new(params["suggestion"].permit(:user_id, :overview, :description, :location))
+		@suggestion = Suggestion.new(params["suggestion"].permit(:user_id, :overview, :description, :location, :lat, :lon))
 		@suggestion.user = current_user
 		if @suggestion.save
 			redirect_to '/suggestions'
@@ -34,9 +34,10 @@ class SuggestionsController < ApplicationController
 	def map
 		@suggestions = Suggestion.all
 		@suggestion_pins = Gmaps4rails.build_markers(@suggestions) do |suggestion, marker|
-  		marker.lat suggestion.latitude
-  		marker.lng suggestion.longitude
-		end
+  		marker.lat suggestion.lat
+  		marker.lng suggestion.lon
+  		marker.infowindow suggestion.description
+ 		end
 	end
 
 	private
@@ -44,7 +45,7 @@ class SuggestionsController < ApplicationController
 			@suggestions = Suggestion.all
 		end
 
-		def load_new_suggstion
+		def load_new_suggestion
 			@suggestion = Suggestion.new
 		end
 

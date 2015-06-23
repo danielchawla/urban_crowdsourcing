@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623085200) do
+ActiveRecord::Schema.define(version: 20150623130810) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "suggestion_id"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20150623085200) do
     t.string  "overview"
     t.string  "description"
     t.string  "location"
+    t.float   "lon"
+    t.float   "lat"
   end
 
   create_table "users", force: :cascade do |t|
