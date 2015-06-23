@@ -61,5 +61,7 @@ group :development, :test do
   
   gem 'underscore-rails'
 
+  gem "font-awesome-rails"
+
 end
 
