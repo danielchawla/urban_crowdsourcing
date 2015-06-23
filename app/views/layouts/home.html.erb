@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 	<head>
 		<!--<p class="notice"><%= notice %></p>
 	  	<p class="alert"><%= alert %></p> -->
@@ -35,10 +35,13 @@
 	        <ul class="sidebar-nav">
 	            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
 	            <li class="sidebar-brand">
-	                <a href="../"  onclick = $("#menu-close").click(); >Urban Crowdsource</a>
+					<a href="../"  onclick = $("#menu-close").click(); >Urban Crowdsource</a>
 	            </li>
 	            <li>
 	                <a href="../" onclick = $("#menu-close").click(); >Home</a>
+	            </li>
+	            <li>
+	                <a href="../suggestions" onclick = $("#menu-close").click(); >Lastest Suggestions</a>
 	            </li>
 	            <li>
 	                <a href="../#about" onclick = $("#menu-close").click(); >About</a>
@@ -52,47 +55,11 @@
 	            <li>
 	                <a href="../#contact" onclick = $("#menu-close").click(); >Contact</a>
 	            </li>
-	           	<li>
-	                <a href="../suggestions" onclick = $("#menu-close").click(); >Suggestions</a>
-	            </li>
 	            <li>
 	                <a href="../users/<%=raw current_user.id %>" onclick = $("#menu-close").click(); >Your Account</a>
 	            </li>
 	        </ul>
 	    </nav>
-
-<!-- 	   	<% if user_signed_in? %>
-			<%= link_to "Logout" , destroy_user_session_path, :method => 'DELETE' %>
-			<% else %>
-			<%= link_to "Sign in" , new_user_session_path  %> 
-			<%= link_to "Sign up" , new_user_registration_path %> 
-		<%end%> -->
-
-
-		<% if params[:controller] != "main" %>
-			<header id="top" class="section bg-primary">
-			    <div class="container">
-			        <div class="row text-center">
-			            <h2><%= params[:controller].titlecase.singularize %></h2>
-			        </div>
-			    </div>
-			</header>
-			<br/>
-			<section id="yield" class="yield">
-			    <div class="container">
-			        <div class="row">
-			            <div class="col-lg-12 text-center">
-			                <p class="lead">
-        <% end %>
-        					<!-- All content but main controller is in between <div id="yield"> -->
-							<%= yield %> 
-		<% if params[:controller] != "main" %>
-						</p>
-			            </div>
-			        </div>
-			    </div>
-			</section>
-        <% end %>
 
 	    <!-- Footer -->
 	    <footer>

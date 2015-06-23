@@ -1,18 +1,16 @@
-<br/>
 
+<!-- Content from other pages -->
+
+<br/>
 <%= link_to 'New Suggestion', new_suggestion_path %><br/><br/>
 
 <%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
 
 <h2>Here are all the suggestions:</h2>
 <br/>
-
 <ol>
-
-<% @suggestions.each do |suggestion| %>
-
-
-	<li><%=render partial: "suggestion", locals: {suggestion: suggestion}%><br/>
-<% end %>
+	<% @suggestions.each do |suggestion| %>
+		<li><%=render partial: "suggestion", locals: {suggestion: suggestion}%><br/>
+	<% end %>
 </ol>
 <br/>
