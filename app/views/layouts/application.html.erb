@@ -38,25 +38,25 @@
 	                <a href="../"  onclick = $("#menu-close").click(); >Urban Crowdsource</a>
 	            </li>
 	            <li>
-	                <a href="../" onclick = $("#menu-close").click(); >Home</a>
+	                <a href="/" onclick = $("#menu-close").click(); >Home</a>
 	            </li>
 	            <li>
-	                <a href="../#about" onclick = $("#menu-close").click(); >About</a>
+	                <a href="/#about" onclick = $("#menu-close").click(); >About</a>
 	            </li>
 	            <li>
-	                <a href="../#services" onclick = $("#menu-close").click(); >Services</a>
+	                <a href="/#services" onclick = $("#menu-close").click(); >Services</a>
 	            </li>
 	            <li>
-	                <a href="../#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+	                <a href="/#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
 	            </li>
 	            <li>
-	                <a href="../#contact" onclick = $("#menu-close").click(); >Contact</a>
+	                <a href="/#contact" onclick = $("#menu-close").click(); >Contact</a>
 	            </li>
 	           	<li>
-	                <a href="../suggestions" onclick = $("#menu-close").click(); >Suggestions</a>
+	                <a href="/suggestions" onclick = $("#menu-close").click(); >Suggestions</a>
 	            </li>
 	            <li>
-	                <a href="../users/<%=raw current_user.id %>" onclick = $("#menu-close").click(); >Your Account</a>
+	                <a href="<%= user_path current_user.id %>" onclick = $("#menu-close").click(); >Your Account</a>
 	            </li>
 	        </ul>
 	    </nav>
