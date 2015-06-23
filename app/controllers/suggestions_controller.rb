@@ -37,7 +37,7 @@ class SuggestionsController < ApplicationController
 		@suggestion_pins = Gmaps4rails.build_markers(@suggestions) do |suggestion, marker|
   		marker.lat suggestion.lat
   		marker.lng suggestion.lon
-  		marker.infowindow suggestion.description
+  		marker.infowindow suggestion.description 
  		end
 	end
 

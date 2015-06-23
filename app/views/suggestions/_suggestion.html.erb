@@ -1,9 +1,14 @@
-<h1>Suggestion <%= suggestion.id %></h1>
+<h1><%= suggestion.overview %></h1>
 
-Overview: <%= suggestion.overview %><br/>
-First Name: <%= suggestion.user.first_name %><br/>
+
+Suggested by: <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
 Location: <%= suggestion.location %><br/>
 Description: <%= suggestion.description %><br/>
+
+<%if params[:id]==nil%>
+<%=link_to "See details" , suggestion_path(suggestion)%>
+<%end%>
+
 
 <br/>
 Replies: 

@@ -8,9 +8,9 @@
 
 <h2>Here are all the suggestions:</h2>
 <br/>
-<ol>
+<ul>
 	<% @suggestions.each do |suggestion| %>
 		<li><%=render partial: "suggestion", locals: {suggestion: suggestion}%><br/>
 	<% end %>
-</ol>
+</ul>
 <br/>
