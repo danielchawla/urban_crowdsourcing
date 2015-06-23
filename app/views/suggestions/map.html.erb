@@ -24,6 +24,7 @@ handler = Gmaps.build('Google');
 
  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function() {
   markers = handler.addMarkers(<%=raw(@suggestion_pins.to_json)%>);
+ <%binding.pry%>
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });

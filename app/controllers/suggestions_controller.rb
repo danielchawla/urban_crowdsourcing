@@ -32,12 +32,31 @@ class SuggestionsController < ApplicationController
 	end
 
 	def map
-		#TODO:ADD ERROR FOR NOT GEOCODED
+
+
+		# @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+  #  		    marker.lat user.latitude
+  #    		marker.lng user.longitude
+  #   	    marker.json({:id => user.id })
+     		
+  #     		marker.infowindow render_to_string(:partial => "/users/3", :locals => { :object => user})
+  #   end
+
+
+
+
+	#	TODO:ADD ERROR FOR NOT GEOCODED
 		@suggestions = Suggestion.geocoded
 		@suggestion_pins = Gmaps4rails.build_markers(@suggestions) do |suggestion, marker|
   		marker.lat suggestion.lat
   		marker.lng suggestion.lon
-  		marker.infowindow suggestion.description 
+  		# marker.picture({
+  		# 	"url" => "/assets/bg.jpg",
+  		# 	"width" =>  32,
+    #  	    "height" => 32})
+ #marker.infowindow render_to_string(:partial => "/users/my_template", :locals => { :object => user}) 			
+ marker.infowindow render_to_string(:partial => "/suggestions/suggestion", :locals => {:suggestion => suggestion})
+ # marker.infowindow suggestion.description 
  		end
 	end
 
