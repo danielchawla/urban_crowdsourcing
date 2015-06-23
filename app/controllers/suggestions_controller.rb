@@ -15,7 +15,7 @@ class SuggestionsController < ApplicationController
 
 	def create
 	 
-		@suggestion = Suggestion.new(params["suggestion"].permit(:user_id, :overview, :description, :location, :lat, :lon))
+		@suggestion = Suggestion.new(params["suggestion"].permit(:user_id, :overview, :description, :location))
 		@suggestion.user = current_user
 		if @suggestion.save
 			redirect_to '/suggestions'
@@ -32,7 +32,8 @@ class SuggestionsController < ApplicationController
 	end
 
 	def map
-		@suggestions = Suggestion.all
+		#TODO:ADD ERROR FOR NOT GEOCODED
+		@suggestions = Suggestion.geocoded
 		@suggestion_pins = Gmaps4rails.build_markers(@suggestions) do |suggestion, marker|
   		marker.lat suggestion.lat
   		marker.lng suggestion.lon
