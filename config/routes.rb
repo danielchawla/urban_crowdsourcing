@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # get 'suggestions/new' => 'suggestions#new'
   # get 'suggestions/edit' => 'suggestions#edit'
   get 'suggestions/map' => 'suggestions#map'
+  get 'home' => 'homepages#index'
   # get 'suggestions/:id' => 'suggestions#show'
 
   # post 'suggestions' => 'suggestions#create'
