@@ -169,7 +169,14 @@ hr.small {
 /* About */
 
 .about {
+    color: primary;
     padding: 50px 0;
+    h1{
+        font-size: 36px;
+    }
+    p {
+        font-size: 20px;
+    }
 }
 
 /* Yield */
@@ -177,9 +184,9 @@ hr.small {
     padding: 50px 0;
 }
 
-/* Services */
+/* Latest Suggestions */
 
-.services {
+.latest-suggestions {
     padding: 50px 0;
 }
 
@@ -218,6 +225,8 @@ hr.small {
 .img-portfolio:hover {
     opacity: 0.8;
 }
+
+
 
 /* Call to Action */
 
