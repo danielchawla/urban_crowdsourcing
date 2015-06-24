@@ -154,6 +154,10 @@ hr.small {
 
 /* Header */
 
+header {
+    z-index: 5;
+}
+
 .header {
     display: table;
     position: relative;
@@ -175,6 +179,13 @@ hr.small {
 
 .container {
     margin-top: 69px;
+}
+
+.container-main {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* About */
