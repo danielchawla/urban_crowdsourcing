@@ -65,5 +65,7 @@ group :development, :test do
 
   gem 'geocoder'
 
+  gem 'will_paginate', '~> 3.0.6'
+
 end
 

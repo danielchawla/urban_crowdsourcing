@@ -1,6 +1,7 @@
 
 <!-- Content from other pages -->
 
+<%= will_paginate @suggestions %>
 <br/>
 <%= link_to 'New Suggestion', new_suggestion_path %><br/><br/>
 
@@ -8,9 +9,10 @@
 
 <h2>Here are all the suggestions:</h2>
 <br/>
-<ul>
+<%= render @suggestions %>
+<!-- <ul>
 	<% @suggestions.each do |suggestion| %>
 		<li><%=render partial: "suggestion", locals: {suggestion: suggestion}%><br/>
 	<% end %>
-</ul>
-<br/>
+</ul> -->
+<br/> 

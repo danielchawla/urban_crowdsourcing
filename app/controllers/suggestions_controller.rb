@@ -6,7 +6,7 @@ class SuggestionsController < ApplicationController
 	before_action :load_new_suggestion, :only => [:index, :new]
 
 	def index
-		# @suggestion = Suggestion.new
+		@suggestions = Suggestion.all.paginate(:page => params[:page], per_page: 3)
 	end
 
 	def new
