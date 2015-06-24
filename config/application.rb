@@ -26,5 +26,9 @@ module UrbanCrowdsourcing
    
     config.active_record.raise_in_transactional_callbacks = true
     config.serve_static_assets = true
+    config.cache_classes = true
+config.serve_static_assets = true
+config.assets.compile = true
+config.assets.digest = true
   end
 end
