@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 		#s@user.save
 		
 		if @user.save
-			redirect_to '/users'
+			redirect_to '/suggestions'
 		else
 			render :new
 		end	
@@ -30,8 +30,5 @@ class UsersController < ApplicationController
 
 
 	def edit
-
-		
-		
 	end
 end

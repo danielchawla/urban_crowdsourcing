@@ -16,18 +16,16 @@
 
 
 <%= form_for suggestion, :url => suggestions_path, :html => { :multipart => true } do |f| %>
-  <%= f.label :overview, "Title" %>:
+  <%= f.label :overview, "Title" %>:<br/>
   <%= f.text_field :overview %><br />
-
-  <%= f.file_field :sug_img %>
  
-  <%= f.label :description %>:
+  <%= f.label :description %>:<br/>
   <%= f.text_field :description %><br />
 
-  <%= f.label :location , "Address"%>:
+  <%= f.label :location , "Address"%>:<br/>
   <%= f.text_field :location %><br />
-
- 
+  <br/>
+  <strong>Upload an Image (optional):</strong> <%= f.file_field :sug_img %>
 
   <br/>
   <%= f.submit%>

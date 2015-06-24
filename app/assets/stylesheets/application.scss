@@ -86,6 +86,7 @@ hr.small {
 }
 
 .sidebar-nav {
+    z-index: 10;
     position: absolute;
     top: 0;
     width: 250px;
@@ -95,17 +96,20 @@ hr.small {
 }
 
 .sidebar-nav li {
+    z-index: 10;
     text-indent: 20px;
     line-height: 40px;
 }
 
 .sidebar-nav li a {
+    z-index: 10;
     display: block;
     text-decoration: none;
     color: #999;
 }
 
 .sidebar-nav li a:hover {
+    z-index: 10;
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
@@ -113,20 +117,24 @@ hr.small {
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
+    z-index: 10;
     text-decoration: none;
 }
 
 .sidebar-nav > .sidebar-brand {
+    z-index: 10;
     height: 55px;
     font-size: 18px;
     line-height: 55px;
 }
 
 .sidebar-nav > .sidebar-brand a {
+    z-index: 10;
     color: #999;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
+    z-index: 10;
     color: #fff;
     background: none;
 }
@@ -153,6 +161,14 @@ hr.small {
 }
 
 /* Header */
+
+.alerter{
+    z-index: 8;
+    height: 20px;
+    position: absolute;
+    color: white;
+    padding: 5px;
+}
 
 header {
     z-index: 5;
@@ -189,13 +205,4 @@ header {
 
 footer {
     padding: 100px 0;
-}
-
-
-#suggestion_description {
-    width: 400px;
-    height: 300px;
-}
-#suggestion_location {
-    width: 400px;
 }

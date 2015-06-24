@@ -2,7 +2,7 @@
 <header id="top" class="header">
     <div class="text-vertical-center">
         <h1>Urban Crowdsource</h1>
-        <h3>Redesigning Our City Together</h3>
+        <h3>Designing Our Cities Together</h3>
         <br>
         <a href="#call-to-action" class="btn btn-dark btn-lg">Get Started</a>
     </div>
@@ -117,10 +117,12 @@
                 <div class="col-lg-12 text-center">
                     <% if user_signed_in? %>
                         <h1>Create a New Suggestion</h1>
+                        <hr class="small">
                         <a href="/suggestions/new" class="btn btn-lg btn-dark">New Suggestion</a>
 
                     <% else %>
-                        <h1>Want to Create a New Suggestion?</h1>
+                        <h1>Create a New Suggestion</h1>
+                        <hr class="small">
                         <a href="/users/sign_in" class="btn btn-lg btn-dark">Log In</a>
                         <a href="/users/sign_up" class="btn btn-lg btn-dark">Sign Up</a>
                     <% end %>
@@ -136,7 +138,7 @@
 <!-- Map -->
 <section id="contact" class="map">
     <div class="text-center">
-        <h1>Suggestion Map</h1>
+        <h1>Current Suggestions</h1>
         <hr class="small">
     </div>
     <div id='maap'>
