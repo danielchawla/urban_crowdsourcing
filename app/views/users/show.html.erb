@@ -14,7 +14,7 @@
 			<h1>Your Suggestions</h1>
 			<div id="user_suggestions">
 			<% @suggestions.each do |suggestion| %>
-					<h1><%= link_to suggestion.overview, suggestion_path(suggestion) %></h1><br/>
+					<h3><%= link_to suggestion.overview, suggestion_path(suggestion) %></h3><br/>
 					<strong>Location:</strong> <%= suggestion.location %><br/>
 					<strong>Description:</strong> <%= suggestion.description %><br/><br/>
 					<strong>Comments:</strong><br/>

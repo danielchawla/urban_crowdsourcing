@@ -1,4 +1,8 @@
-<h1><%=link_to suggestion.overview.titlecase, suggestion_path(suggestion)%></h1>
+<% if params[:action] == 'show' %>
+	<h3><%= suggestion.overview.titlecase %></h3>
+<% else %>
+	<h3><%=link_to suggestion.overview.titlecase, suggestion_path(suggestion)%></h3>
+<% end %>
 
 <strong>Suggested By:</strong> <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
 <strong>Proposed Location:</strong> <%= suggestion.location %><br/>

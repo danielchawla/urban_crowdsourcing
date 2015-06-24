@@ -1,6 +1,15 @@
-<h1>New Suggestion</h1>
 
-<%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
+<!-- Button to create new suggestion -->
+<div class="suggestion_button">
+	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Create A New Suggestion</button>
+	<div class="collapse" id="collapseExample">
+		<div class="well">
+			<%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
+		</div>
+	</div>
+</div>
+
+
 <br/>
 <h1>All Suggestions</h1>
 <br/>

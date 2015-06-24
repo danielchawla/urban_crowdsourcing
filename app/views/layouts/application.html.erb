@@ -21,7 +21,7 @@
 
 		<!--<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= stylesheet_link_tag 'bootstrap.in', media: 'all', 'data-turbolinks-track' => true %> -->
-		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
 		<%= csrf_meta_tags %>
 
 	</head>
@@ -81,27 +81,21 @@
 
 		<!-- Import content from other places with yield -->
 		<% if params[:controller] != "main" %>
-			<header id="top" class="section bg-primary">
+<!-- 			<header id="top" class="section bg-primary">
 			    <div class="container">
 			        <div class="row text-center">
 			            <h2><%= params[:controller].titlecase.singularize %></h2>
 			        </div>
 			    </div>
 			</header>
-			<br/>
+			<br/> -->
 			<section id="yield" class="yield">
-			    <div class="container">
-			      <!--   <div class="row">
-			            <div class="col-lg-12 text-center">
-			                <p class="lead"> -->
+			    <!-- <div class="container"> -->
         <% end %>
         					<!-- All content but main controller is in between <div id="yield"> -->
 							<%= yield %> 
 		<% if params[:controller] != "main" %>
-						<!-- /p>
-			            </div>
-			        </div> -->
-			    </div>
+			    <!-- </div> -->
 			</section>
         <% end %>
 
