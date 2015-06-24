@@ -1,28 +1,34 @@
-<h1><%= @user.first_name %>'s Profile</h1>
-<div id="profile">
-	<table>
-		<tr>
-			<td>
-				<div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
-				<div>Age: <%= @user.age %></div>
-				<div>Occupation: <%= @user.occupation %></div>
-				<div>Gender: <%= @user.gender %></div>
-			</td>
-		</tr>
-	</table>
-</div>
-<br/>
-<br/>
-
-<div id="user_suggestions">
-<table>
-<% @suggestions.each do |suggestion| %>
-	<tr>
-		<td>First Name: <%= suggestion.user.first_name %><br/>
-		Overview: <%= suggestion.overview %><br/>
-		Location: <%= suggestion.location %><br/>
-		Description: <%= suggestion.description %><br/></td>
-	</tr>
-<% end %>
-</table>
-<br/>
+<div class="container">
+	<div class="row">
+		<div class="span4">
+			<h1>Your Account Info</h1>
+			<div id="profile">
+				<div><strong>Name:</strong> <%= @user.first_name %> <%= @user.last_name %></div>
+				<div><strong>Age:</strong> <%= @user.age %></div>
+				<div><strong>Occupation:</strong> <%= @user.occupation %></div>
+				<div><strong>Gender:</strong> <%= @user.gender %></div>
+			</div>
+		</div>
+		
+		<div class="span 8">
+			<h1>Your Suggestions</h1>
+			<div id="user_suggestions">
+			<% @suggestions.each do |suggestion| %>
+					<h1><%= link_to suggestion.overview, suggestion_path(suggestion) %></h1><br/>
+					<strong>Location:</strong> <%= suggestion.location %><br/>
+					<strong>Description:</strong> <%= suggestion.description %><br/><br/>
+					<strong>Comments:</strong><br/>
+					<% suggestion.comments.each do |comment|%>
+					<%= comment.user.first_name %>: <%= comment.text %><br/>
+					<i>		<%= time_ago_in_words(comment.created_at) %> ago</i> 
+					<br/>
+					<%end%>
+<!-- 					<% if suggestion.id!=nil%>
+						<%=link_to "See More" , suggestion_path(suggestion)%>
+					<%end%> -->
+					<br/>
+			<% end %>
+			<br/>
+		</div>
+	</div>
+</div>	

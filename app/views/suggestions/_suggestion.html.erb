@@ -1,20 +1,14 @@
-<h1><%= suggestion.overview %></h1>
+<h1><%=link_to suggestion.overview.titlecase, suggestion_path(suggestion)%></h1>
 
+<strong>Suggested By:</strong> <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
+<strong>Proposed Location:</strong> <%= suggestion.location %><br/>
+<strong>Description:</strong> <%= suggestion.description %><br/><br/>
+<strong>Comments:</strong><br/>
 
-Suggested by: <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
-Location: <%= suggestion.location %><br/>
-Description: <%= suggestion.description %><br/>
-
-<%if params[:id]==nil%>
-<%=link_to "See details" , suggestion_path(suggestion)%>
-<%end%>
-
-
+	<% suggestion.comments.each do |comment|%>
+	<%= comment.user.first_name %>: <%= comment.text %><br/>
+	<i>		<%= time_ago_in_words(comment.created_at) %> ago</i> 
+	<br/>
+	<%end%>
+<%= link_to "Add comment here..." , new_suggestion_comment_path(suggestion) %>
 <br/>
-Replies: 
-
-<%= link_to "New Comment" , new_suggestion_comment_path(suggestion) %>
-<% suggestion.comments.each do |comment|%>
-<br/>
-<%= comment.text %>
-<%end%>

@@ -8,7 +8,7 @@
     </div>
 </header>
 
-<!-- About -->
+
 <!--<% if user_signed_in? %>
     <%= link_to "Logout" , destroy_user_session_path, :method => 'DELETE' %>
     <% else %>
@@ -16,7 +16,7 @@
     <%= link_to "Sign up" , new_user_registration_path %> 
 <%end%> -->
 
-
+<!-- About -->
 <section id="about" class="about">
     <div class="text-center">
         <h1>How Urban Crowdsourcing Works</h1>
@@ -84,7 +84,7 @@
 <!-- Callout -->
 <aside class="callout">
     <div class="text-vertical-center">
-        <h1>Your city. Your plans.</h1>
+        <h1><i>Your city. Your plans.</i></h1>
         <br/>
         <div class="container">
         </div>
@@ -131,65 +131,51 @@
 
 
 
+
+
 <!-- Map -->
-
-
-
-
-
 <section id="contact" class="map">
-
-
-<div id='maap'>
-
-
+    <div class="text-center">
+        <h1>Suggestion Map</h1>
+        <hr class="small">
+    </div>
+    <div id='maap'>
+        <script type="text/javascript">
+            function getScrollBarWidth () {
+        var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'}).appendTo('body'),
+            widthWithScroll = $('<div>').css({width: '100%'}).appendTo($outer).outerWidth();
+        $outer.remove();
+        return 100 - widthWithScroll;
+    };
+                $('#maap').css('width', window.innerWidth-getScrollBarWidth());
+        </script>
+          <div id="map" style='width: 800px; height: 450px;'></div>
+          <script type="text/javascript">
+                $('#map').css('width', window.innerWidth-getScrollBarWidth());
+            </script>
+          <script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
+          <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
+    </div>
 
     <script type="text/javascript">
-        function getScrollBarWidth () {
-    var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'}).appendTo('body'),
-        widthWithScroll = $('<div>').css({width: '100%'}).appendTo($outer).outerWidth();
-    $outer.remove();
-    return 100 - widthWithScroll;
-};
-            $('#maap').css('width', window.innerWidth-getScrollBarWidth());
+        go();
+    window.addEventListener('resize', go);
+
+    function go(){
+        $('#maap').css('width', window.innerWidth-getScrollBarWidth());
+        $('#map').css('width', window.innerWidth-getScrollBarWidth());
+      
+    }
     </script>
-      <div id="map" style='width: 800px; height: 450px;'></div>
-      <script type="text/javascript">
-            $('#map').css('width', window.innerWidth-getScrollBarWidth());
-        </script>
-      <script src="//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry" type="text/javascript"></script>
-      <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
-</div>
 
-<script type="text/javascript">
-    go();
-window.addEventListener('resize', go);
+    <script type="text/javascript">
+    handler = Gmaps.build('Google');
 
-function go(){
-    $('#maap').css('width', window.innerWidth-getScrollBarWidth());
-    $('#map').css('width', window.innerWidth-getScrollBarWidth());
-  
-}
-</script>
+     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function() {
+      markers = handler.addMarkers(<%=raw(@suggestion_pins.to_json)%>);
 
-<script type="text/javascript">
-handler = Gmaps.build('Google');
-
- handler.buildMap({ provider: {}, internal: {id: 'map'}}, function() {
-  markers = handler.addMarkers(<%=raw(@suggestion_pins.to_json)%>);
-
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
-</script>
-
-
-
-
-    <!-- <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-    <br />
-    <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-    </small>
-    </iframe> -->
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+    </script>
 </section>

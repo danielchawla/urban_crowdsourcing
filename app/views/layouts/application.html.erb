@@ -26,8 +26,18 @@
 
 	</head>
 
+
+		<!-- Log In and Out Code -->
+<!-- 	<% if user_signed_in? %>
+			<%= link_to "Logout" , destroy_user_session_path, :method => 'DELETE' %>
+			<% else %>
+			<%= link_to "Sign in" , new_user_session_path  %> 
+			<%= link_to "Sign up" , new_user_registration_path %> 
+		<%end%> -->
+
 	<body>
-	    <!-- Navigation -->
+
+	    <!-- Navigation Bar -->
 	    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
 	    <nav id="sidebar-wrapper">
 	        <ul class="sidebar-nav">
@@ -39,19 +49,19 @@
 	                <a href="/" onclick = $("#menu-close").click(); >Home</a>
 	            </li>
 	            <li>
-	                <a href="/#about" onclick = $("#menu-close").click(); >How it Works</a>
+	                <a href="/#about" onclick = $("#menu-close").click(); >About</a>
 	            </li>
 	            <li>
-	                <a href="/#latest-suggestions" onclick = $("#menu-close").click(); >Latest Suggestions</a>
+	                <a href="/#latest-suggestions" onclick = $("#menu-close").click(); >Lastest Suggestions</a>
 	            </li>
-	            <li>
-	                <a href="/#our-team" onclick = $("#menu-close").click(); >Our Team</a>
-	            </li>
-	            <li>
-	                <a href="/#contact" onclick = $("#menu-close").click(); >Contact</a>
-	            </li>
+<!-- 	            <li>
+	                <a href="/#our-team" onclick = $("#menu-close").click(); ></a>
+	            </li> -->
+<!-- 	            <li>
+	                <a href="/#contact" onclick = $("#menu-close").click(); >Suggestions Map</a>
+	            </li> -->
 	           	<li>
-	                <a href="/suggestions" onclick = $("#menu-close").click(); >Suggestions</a>
+	                <a href="/suggestions" onclick = $("#menu-close").click(); >All Suggestions</a>
 	            </li>
 	            <%if user_signed_in?%>
 		            <li>
@@ -68,12 +78,6 @@
 	        </ul>
 	    </nav>
 
-<!-- 	   	<% if user_signed_in? %>
-			<%= link_to "Logout" , destroy_user_session_path, :method => 'DELETE' %>
-			<% else %>
-			<%= link_to "Sign in" , new_user_session_path  %> 
-			<%= link_to "Sign up" , new_user_registration_path %> 
-		<%end%> -->
 
 		<!-- Import content from other places with yield -->
 		<% if params[:controller] != "main" %>
@@ -87,16 +91,16 @@
 			<br/>
 			<section id="yield" class="yield">
 			    <div class="container">
-			        <div class="row">
+			      <!--   <div class="row">
 			            <div class="col-lg-12 text-center">
-			                <p class="lead">
+			                <p class="lead"> -->
         <% end %>
         					<!-- All content but main controller is in between <div id="yield"> -->
 							<%= yield %> 
 		<% if params[:controller] != "main" %>
-						</p>
+						<!-- /p>
 			            </div>
-			        </div>
+			        </div> -->
 			    </div>
 			</section>
         <% end %>
@@ -132,12 +136,6 @@
 	            </div>
 	        </div>
 	    </footer>
-
-	    <!-- jQuery -->
-	    <script src="assets/jquery.js"></script>
-
-	    <!-- Bootstrap Core JavaScript -->
-	    <script src="assets/bootstrap.min.js"></script>
 
 	    <!-- Custom Theme JavaScript -->
 	    <script>
