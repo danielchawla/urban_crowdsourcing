@@ -1,3 +1,11 @@
+<header id="top" class="section bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <h1>Hello, <%= @user.first_name %></h1>
+        </div>
+    </div>
+</header>
+
 <div class="container">
 	<div class="row">
 		<div class="span4">
@@ -9,6 +17,9 @@
 				<div><strong>Gender:</strong> <%= @user.gender %></div>
 			</div>
 		</div>
+		
+		<br/>
+		<%= link_to 'Edit Account Details', edit_user_registration_path %>
 		
 		<div class="span 8">
 			<h1>Your Suggestions</h1>
@@ -23,9 +34,6 @@
 					<i>		<%= time_ago_in_words(comment.created_at) %> ago</i> 
 					<br/>
 					<%end%>
-<!-- 					<% if suggestion.id!=nil%>
-						<%=link_to "See More" , suggestion_path(suggestion)%>
-					<%end%> -->
 					<br/>
 			<% end %>
 			<br/>
