@@ -10,10 +10,16 @@
 </div>
 <% end %>
 
-<%= form_for suggestion do |f| %>
+<!-- <%= form_for suggestion, :url => suggestions_path, :html => { :multipart => true } do |f| %>
+  <%= f.file_field :sug_img %>
+<% end %> -->
+
+
+<%= form_for suggestion, :url => suggestions_path, :html => { :multipart => true } do |f| %>
   <%= f.label :overview, "Title" %>:
   <%= f.text_field :overview %><br />
 
+  <%= f.file_field :sug_img %>
  
   <%= f.label :description %>:
   <%= f.text_field :description %><br />

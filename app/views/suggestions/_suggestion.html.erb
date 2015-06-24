@@ -4,9 +4,17 @@
 	<h3><%=link_to suggestion.overview.titlecase, suggestion_path(suggestion)%></h3>
 <% end %>
 
-<strong>Suggested By:</strong> <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
+
+
+<strong>Plan Submitted By:</strong> <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
+
+<%= image_tag suggestion.sug_img.url(:medium) %>
+
 <strong>Proposed Location:</strong> <%= suggestion.location %><br/>
 <strong>Description:</strong> <%= suggestion.description %><br/><br/>
+
+
+<%if !suggestion.comments.empty?%>
 <strong>Comments:</strong><br/>
 
 	<% suggestion.comments.each do |comment|%>
@@ -14,5 +22,7 @@
 	<i>		<%= time_ago_in_words(comment.created_at) %> ago</i> 
 	<br/>
 	<%end%>
+	<%end%>
 <%= link_to "Add comment here..." , new_suggestion_comment_path(suggestion) %>
 <br/>
+
