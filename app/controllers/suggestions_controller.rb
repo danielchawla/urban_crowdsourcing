@@ -23,6 +23,7 @@ class SuggestionsController < ApplicationController
 		@suggestion = Suggestion.new(params["suggestion"].permit(:user_id, :overview, :description, :location, :sug_img))
 		@suggestion.user = current_user
 		if @suggestion.save
+
 			redirect_to '/suggestions'
 		else
 			render :new
@@ -34,6 +35,7 @@ class SuggestionsController < ApplicationController
 
 	def show
 		@suggestion = Suggestion.find(params[:id])
+		session[:last_suggestion_page] = request.env['HTTP_REFERER'] || suggestions_path
 	end
 
 	def map
