@@ -196,8 +196,25 @@ header {
 
 
 @media(max-width:768px) {
-    .map {
-        height: 75%;
+    .header {
+        h1 {
+            font-size: 40px;
+        }
+    }
+    .header_others {
+        h1 {
+            font-size: 24px;
+        }
+    }
+    .map{
+        .h1 {
+            font-size: 24px;
+        }
+    }
+    .callout{
+        h1 {
+            font-size: 48px;
+        }
     }
 }
 
