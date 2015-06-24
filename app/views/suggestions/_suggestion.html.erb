@@ -7,9 +7,9 @@
 
 
 <strong>Plan Submitted By:</strong> <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
-
+<% if suggestion.sug_img_updated_at!=nil%>
 <%= image_tag suggestion.sug_img.url(:medium) %>
-
+<%end%>
 <strong>Proposed Location:</strong> <%= suggestion.location %><br/>
 <strong>Description:</strong> <%= suggestion.description %><br/><br/>
 
