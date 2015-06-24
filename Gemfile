@@ -1,6 +1,20 @@
 source 'https://rubygems.org'
 
+ gem 'devise', '~> 3.5.1'
 
+  gem 'paperclip', '~> 4.2'
+
+  gem 'bootstrap-sass', '~> 3.3.5' 
+
+ gem 'gmaps4rails'
+  
+  gem 'underscore-rails'
+
+  gem "font-awesome-rails"
+
+  gem 'geocoder'
+
+  gem 'will_paginate', '~> 3.0.6'
 
 
 
@@ -8,7 +22,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,6 +50,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+
+end
+
 group :development, :test do  
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -45,25 +65,12 @@ group :development, :test do
   gem 'spring'
 
  #Developer-added gems
-  gem 'devise', '~> 3.5.1'
-
-  gem 'paperclip', '~> 4.2'
-
-  gem 'bootstrap-sass', '~> 3.3.5' 
-
+ 
   gem 'quiet_assets'
 
   gem 'pry-byebug'
 
-  gem 'gmaps4rails'
-  
-  gem 'underscore-rails'
-
-  gem "font-awesome-rails"
-
-  gem 'geocoder'
-
-  gem 'will_paginate', '~> 3.0.6'
-
+gem 'sqlite3'
+ 
 end
 
