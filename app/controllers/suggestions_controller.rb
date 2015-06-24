@@ -46,7 +46,7 @@ class SuggestionsController < ApplicationController
 
 
 	#	TODO:ADD ERROR FOR NOT GEOCODED
-		@suggestions = Suggestion.geocoded
+		@suggestions = Suggestion.geocoded.includes(:comments, :user)
 		@suggestion_pins = Gmaps4rails.build_markers(@suggestions) do |suggestion, marker|
   		marker.lat suggestion.lat
   		marker.lng suggestion.lon
