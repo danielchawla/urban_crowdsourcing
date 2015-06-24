@@ -21,7 +21,7 @@
     <div class="text-center">
         <h1>How Urban Crowdsourcing Works</h1>
         <hr class="small">
-        <div class="container">
+        <div class="container-main">
             <p>It's a simple concept. We are putting the future of your city into your hands. In under 30 seconds, you can create a new <a href="/suggestions">Suggestion</a> describing an idea you would like to see implemented in your city. Your idea will be submitted to our online community who will help evaluate and build on your idea. Then your idea will be submitted to your local urban planners. Your city's future is really yours to create. </p>
         </div>
     </div>
@@ -29,7 +29,7 @@
 
 <!-- Lastest Suggestions -->
 <section id="latest-suggestions" class="latest-suggestions bg-primary">
-    <div class="container">
+    <div class="container-main">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
                 <h1>Lastest Suggestions</h1>
@@ -78,7 +78,7 @@
         </div>
         <!-- /.row -->
     </div>
-    <!-- /.container -->
+    <!-- /.container-main -->
 </section>
 
 <!-- Callout -->
@@ -86,7 +86,7 @@
     <div class="text-vertical-center">
         <h1><i>Your city. Your plans.</i></h1>
         <br/>
-        <div class="container">
+        <div class="container-main">
         </div>
     </div>
 </aside>
@@ -94,7 +94,7 @@
 
 <!-- Our Team -->
 <section id="our-team" class="our-team">
-    <div class="container">
+    <div class="container-main">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2>Crowdsourcing in Capetown</h2>
@@ -107,17 +107,17 @@
         </div>
         <!-- /.row -->
     </div>
-    <!-- /.container -->
+    <!-- /.container-main -->
 </section>
 
 <!-- Call to Action -->
 <section id="call-to-action" class="call-to-action bg-primary">
-    <div class="container">
+    <div class="container-main">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <% if user_signed_in? %>
                         <h1>Create a New Suggestion</h1>
-                        <a href="/suggestions" class="btn btn-lg btn-dark">New Suggestion</a>
+                        <a href="/suggestions/new" class="btn btn-lg btn-dark">New Suggestion</a>
 
                     <% else %>
                         <h1>Want to Create a New Suggestion?</h1>

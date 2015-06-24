@@ -1,22 +1,25 @@
-<header id="top" class="section bg-primary">
-    <div class="container">
+<header id="top" class="header_others bg-primary">
+    <div class="content">
         <div class="row text-center">
             <h1>Urban Crowdsource Users</h1>
         </div>
     </div>
 </header>
 
-<h1>Here's a list of all the users</h1>
-<br/>
+<div class="container">
 
-<ol>
-<% @users.each do |user| %>
-	<li>First Name: <%= user.first_name %><br/>
-	Last Name: <%= user.last_name %><br/>
-	Age: <%= user.age %><br/>
-	Occupation: <%= user.occupation %><br/>
-	Gender: <%= user.gender %></li><br/>
+	<h1>Here's a list of all the users</h1>
 	<br/>
-<% end %>
-</ul>
-<or/>
+
+	<ol>
+	<% @users.each do |user| %>
+		<li>First Name: <%= user.first_name %><br/>
+		Last Name: <%= user.last_name %><br/>
+		Age: <%= user.age %><br/>
+		Occupation: <%= user.occupation %><br/>
+		Gender: <%= user.gender %></li><br/>
+		<br/>
+	<% end %>
+	</ol>
+	<br/>
+</div>

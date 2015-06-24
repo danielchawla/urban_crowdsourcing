@@ -1,18 +1,17 @@
-<header id="top" class="section bg-primary">
-    <div class="container">
-        <div class="row text-center">
-            <h1>New Suggestion</h1>
-        </div>
+<header id="top" class="header_others bg-primary">
+    <div class="row text-center">
+        <h1>New Suggestion</h1>
     </div>
 </header>
 
-<br/>
-
-<div class="suggestion_button">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Create A New Suggestion</button>
-	<div class="collapse" id="collapseExample">
-		<div class="well">
-			<%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
+<div class="container">
+	<br/>
+	<div class="suggestion_button">
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Create A New Suggestion</button>
+		<div class="collapse" id="collapseExample">
+			<div class="well">
+				<%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
+			</div>
 		</div>
 	</div>
 </div>
