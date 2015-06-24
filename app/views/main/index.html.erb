@@ -41,7 +41,7 @@
                                 <strong><%= Suggestion.last[:overview].titlecase %></strong>
                             </h4>
                             <p><%= Suggestion.last[:description] %></p>
-                            <a href="#" class="btn btn-light">Read More</a>  
+                            <a href="/suggestions/<%= Suggestion.last[:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -50,7 +50,7 @@
                                 <strong><%= Suggestion.all[-2][:overview].titlecase %></strong>
                             </h4>
                             <p><%= Suggestion.all[-2][:description] %></p>
-                            <a href="#" class="btn btn-light">Read More</a>  
+                            <a href="/suggestions/<%= Suggestion.all[-2][:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -59,7 +59,7 @@
                                 <strong><%= Suggestion.all[-3][:overview].titlecase %></strong>
                             </h4>
                             <p><%= Suggestion.all[-3][:description] %></p>
-                            <a href="#" class="btn btn-light">Read More</a>  
+                            <a href="/suggestions/<%= Suggestion.all[-3][:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
@@ -68,7 +68,7 @@
                                 <strong><%= Suggestion.all[-4][:overview].titlecase %></strong>
                             </h4>
                             <p><%= Suggestion.all[-4][:description] %></p>
-                            <a href="#" class="btn btn-light">Read More</a>  
+                            <a href="/suggestions/<%= Suggestion.all[-4][:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
                 </div>
