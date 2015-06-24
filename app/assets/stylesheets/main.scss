@@ -1,3 +1,100 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: url(/assets/bg2.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.container-main {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* About */
+
+.about {
+    color: primary;
+    padding: 50px 0;
+    h1{
+        font-size: 36px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+.latest-suggestions {
+    padding: 50px 0;
+    h1{
+        font-size: 36px;
+    }
+}
+
+.suggestions-item {
+    margin-bottom: 30px;
+    h4 {
+        height: 30px;
+        line-height: 30px;
+        overflow: hidden;
+    }
+    p {
+        height: 140px;
+        line-height:20px;
+        overflow: hidden;   
+    }
+}
+
+/* Callout */
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(/assets/callout.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    h1 {
+        font-size: 36px;
+    }
+}
+
+/* Portfolio */
+
+.our-team {
+    padding: 50px 0;   
+}
+
+
+/* Call to Action */
+
+.call-to-action {
+    padding: 50px 0;
+    h1{
+        font-size: 36px;
+    }
+}
+
+.call-to-action .btn {
+    margin: 10px;
+}
+
+/* Map */
+
+.map {
+    height: 500px;
+}

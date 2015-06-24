@@ -8,7 +8,7 @@
  @import "users";
  @import "font-awesome";
  @import "suggestions";
-
+ @import "main";
 
 html,
 body {
@@ -132,7 +132,7 @@ hr.small {
 }
 
 #menu-toggle {
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     top: 0;
     right: 0;
@@ -158,18 +158,7 @@ header {
     z-index: 5;
 }
 
-.header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: url(/assets/bg2.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+
 
 .header_others {
     position: fixed;
@@ -181,97 +170,13 @@ header {
     margin-top: 69px;
 }
 
-.container-main {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
 
-/* About */
-
-.about {
-    color: primary;
-    padding: 50px 0;
-    h1{
-        font-size: 36px;
-    }
-    p {
-        font-size: 20px;
-    }
-}
 
 /* Yield */
 .yield {
     padding: 50px 0;
 }
 
-
-/* Latest Suggestions */
-
-.latest-suggestions {
-    padding: 50px 0;
-    h1{
-        font-size: 36px;
-    }
-}
-
-.suggestions-item {
-    margin-bottom: 30px;
-    h4 {
-        height: 30px;
-        line-height: 30px;
-        overflow: hidden;
-    }
-    p {
-        height: 140px;
-        line-height:20px;
-        overflow: hidden;   
-    }
-}
-
-/* Callout */
-
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(/assets/callout.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    h1 {
-        font-size: 36px;
-    }
-}
-
-/* Portfolio */
-
-.our-team {
-    padding: 50px 0;   
-}
-
-
-/* Call to Action */
-
-.call-to-action {
-    padding: 50px 0;
-    h1{
-        font-size: 36px;
-    }
-}
-
-.call-to-action .btn {
-    margin: 10px;
-}
-
-/* Map */
-
-.map {
-    height: 500px;
-}
 
 
 @media(max-width:768px) {
