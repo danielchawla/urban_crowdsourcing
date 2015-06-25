@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<%if !(current_user.try(:admin?))%>
+  	<%suggestion_collection = Suggestion.all.where(:approved => true)%>
+<%end%>
+	
 <html lang="en">
 
 	<head>

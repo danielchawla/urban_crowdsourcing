@@ -15,6 +15,10 @@ class Suggestion < ActiveRecord::Base
   	validates_attachment_content_type :sug_img, :content_type => /\Aimage\/.*\Z/
 	
 
+#dev created methods:
+
+
+
 end
 
 
