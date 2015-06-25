@@ -32,18 +32,21 @@
     <div class="container-main">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
-                <h1>Lastest Suggestions</h1>
+                <h1>Latest Suggestions</h1>
                 <hr class="small">
                 <div class="row">
+                <%if Suggestion.all[-1] != nil%>
                     <div class="col-md-3 col-sm-6">
                         <div class="suggestions-item">
                             <h4>
-                                <strong><%= Suggestion.last[:overview].titlecase %></strong>
+                                <strong><%= Suggestion.all[-1][:overview].titlecase %></strong>
                             </h4>
-                            <p><%= Suggestion.last[:description] %></p>
-                            <a href="/suggestions/<%= Suggestion.last[:id] %>" class="btn btn-light">Read More</a>  
+                            <p><%= Suggestion.all[-1][:description] %></p>
+                            <a href="/suggestions/<%= Suggestion.all[-1][:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
+                <%end%>
+                <%if Suggestion.all[-2] != nil%>
                     <div class="col-md-3 col-sm-6">
                         <div class="suggestions-item">
                             <h4>
@@ -53,6 +56,8 @@
                             <a href="/suggestions/<%= Suggestion.all[-2][:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
+                <%end%>
+                <%if Suggestion.all[-3] != nil%>
                     <div class="col-md-3 col-sm-6">
                         <div class="suggestions-item">
                             <h4>
@@ -62,6 +67,8 @@
                             <a href="/suggestions/<%= Suggestion.all[-3][:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
+                <%end%>
+                <%if Suggestion.all[-4] != nil%>
                     <div class="col-md-3 col-sm-6">
                         <div class="suggestions-item">
                             <h4>
@@ -71,6 +78,7 @@
                             <a href="/suggestions/<%= Suggestion.all[-4][:id] %>" class="btn btn-light">Read More</a>  
                         </div>
                     </div>
+                <%end%>
                 </div>
                 <!-- /.row (nested) -->
             </div>
