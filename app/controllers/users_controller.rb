@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
+	#if current_user.try(:admin?)
+  	# do something
+	#end
+
+	#current_user.update_attribute :admin, true
 	
+
+
 	before_action :authenticate_user!
 
 	def index

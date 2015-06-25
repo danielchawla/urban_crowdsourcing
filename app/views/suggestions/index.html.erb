@@ -38,11 +38,7 @@
     <br/>
 
     <%= render @suggestions %>
-    <!-- <ul>
-    	<% @suggestions.each do |suggestion| %>
-    		<li><%=render partial: "suggestion", locals: {suggestion: suggestion}%><br/>
-    	<% end %>
-    </ul> -->
+   
     <br/> 
 
     <%= will_paginate @suggestions %>

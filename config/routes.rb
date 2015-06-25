@@ -29,8 +29,14 @@ Rails.application.routes.draw do
   resources :users, :only => [:show, :index, :create, :new, :edit]
   resources :suggestions, :only => [:show, :index, :create, :new, :edit] do
      resources :comments, :only => [:index, :new, :create]
+     member do
+       get :approve
+       put :approve
+    end   
    end
-
+  
+ 
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

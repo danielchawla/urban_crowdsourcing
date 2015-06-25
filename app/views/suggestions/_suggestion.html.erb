@@ -4,6 +4,10 @@
 	<h3><%=link_to suggestion.overview.titlecase, suggestion_path(suggestion)%></h3>
 <% end %>
 
+<%if current_user.try(:admin?)%>
+	<%=link_to('Approve', approve_suggestion_path(suggestion), :method => :put)%>
+<%end%>
+
 
 
 <strong>Plan Submitted By:</strong> <%= link_to suggestion.user.first_name , user_path(suggestion.user.id) %><br/>
