@@ -30,8 +30,11 @@ Rails.application.routes.draw do
   resources :suggestions, :only => [:show, :index, :create, :new, :edit] do
      resources :comments, :only => [:index, :new, :create]
      member do
-       get :approve
-       put :approve
+       #get :approve
+       put :approve, as: :approve
+       delete :destroy, as: :delete
+
+
     end   
    end
   

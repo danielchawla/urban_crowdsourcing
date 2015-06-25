@@ -6,6 +6,7 @@
 
 <%if current_user.try(:admin?)%>
 	<%=link_to('Approve', approve_suggestion_path(suggestion), :method => :put)%>
+	<%=link_to('Delete', delete_suggestion_path(suggestion), :method => :delete)%>
 <%end%>
 
 

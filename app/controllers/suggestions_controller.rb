@@ -84,8 +84,15 @@ class SuggestionsController < ApplicationController
    	 @suggestion = Suggestion.find(params[:id])
    	 @suggestion.approved = true
    	 @suggestion.save
-   	 redirect_to suggestion_path(@suggestion)
+   	 redirect_to request.env['HTTP_REFERER'] #suggestion_path(@suggestion)
  	end
+
+ 	def destroy
+ 		@suggestion = Suggestion.find(params[:id])
+ 		@suggestion.destroy
+ 		redirect_to suggestions_path
+ 	end
+
 	
 
 	private
