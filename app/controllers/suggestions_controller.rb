@@ -1,6 +1,6 @@
 class SuggestionsController < ApplicationController
 
-	before_action :authenticate_user!, :only => [:new, :create]
+	before_action :authenticate_user!, :only => [:new, :create, :vote]
 	before_action :load_suggestions, :only => [:index, :create]
 	before_action :load_new_suggestion, :only => [:index, :new]
 
