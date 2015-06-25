@@ -1,0 +1,9 @@
+development:
+  access_key_id: AKIAIWXXQA6YYOHE4UZA
+  secret_access_key: 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
+
+production:
+  access_key_id: AKIAIWXXQA6YYOHE4UZA
+  secret_access_key: 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
+
+  #TODO hide this shit in env

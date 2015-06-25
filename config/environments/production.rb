@@ -81,5 +81,11 @@ Rails.application.configure do
   config.serve_static_files = true
   config.assets.compile = true
   config.assets.digest = true
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => 'pacificthicket'
+  }
+}
 
 end
