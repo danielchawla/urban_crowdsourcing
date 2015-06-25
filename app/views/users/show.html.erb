@@ -18,23 +18,33 @@
 				<%= link_to 'Edit Account Details', edit_user_registration_path %>
 			</div>
 		</div>
-		<div class="col-md-8">
+
+		<div class="col-md-9">
 			<h2>Your Suggestions</h2>
 			<div id="user_suggestions">
-			<% @suggestions.each do |suggestion| %>
-					<h3><%= link_to suggestion.overview, suggestion_path(suggestion) %></h3><br/>
-					<strong>Location:</strong> <%= suggestion.location %><br/>
-					<strong>Description:</strong> <%= suggestion.description %><br/><br/>
-					<strong>Comments:</strong><br/>
-					<% suggestion.comments.each do |comment|%>
-					<%= comment.user.first_name %>: <%= comment.text %><br/>
-					<i>		<%= time_ago_in_words(comment.created_at) %> ago</i> 
-					<br/>
+				<% @suggestions.each do |suggestion| %>
+					<h3><%= link_to suggestion.overview, suggestion_path(suggestion) %></h3>
+					<strong>Proposed Location:</strong> <%= suggestion.location %><br/>
+					<strong>Description:</strong> <%= suggestion.description %>
+					<% if suggestion.sug_img_updated_at!=nil%>
+						<br/><br/>
+						<strong>Image:</strong><br/><%= image_tag suggestion.sug_img.url(:medium) %>
 					<%end%>
-					<br/>
-			<% end %>
+					<br/><br/>
+					<%if !suggestion.comments.empty?%>
+						<strong>Comments:</strong><br/>
+
+						<% suggestion.comments.each do |comment|%>
+						<%= comment.user.first_name %>: <%= comment.text %><br/>
+						<i>		<%= time_ago_in_words(comment.created_at) %> ago</i> 
+						<br/>
+					<%end%>
+				<%end%>
+				<%end%>
+				<br/>
 			<br/>
 			</div>
 		</div>
 	</div>	
 </div>
+

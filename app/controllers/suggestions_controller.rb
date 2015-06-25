@@ -9,9 +9,10 @@ class SuggestionsController < ApplicationController
 
 	def index
 
+
 		if !(current_user.try(:admin?))
   			#suggestion_collection = Suggestion.all.where(:approved => true)
-			@suggestions = Suggestion.all.where(:approved => true).order('id DESC').paginate(:page => params[:page], :per_page => 3)
+			@suggestions = Suggestion.all.where(:approved => true).order('id DESC').paginate(:page => params[:page], :per_page => 5)
 			@suggestion_pins = Gmaps4rails.build_markers(Suggestion.all.where(:approved => true).geocoded) do |suggestion, marker|
   				marker.lat suggestion.lat
   				marker.lng suggestion.lon
@@ -24,6 +25,7 @@ class SuggestionsController < ApplicationController
   				marker.lng suggestion.lon
   				marker.infowindow render_to_string(:partial => "/suggestions/suggestion", :locals => {:suggestion => suggestion})
 			end
+
 		end
 	end
 

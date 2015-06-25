@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 	def show
 		#binding.pry
 		@user = User.find(params[:id])
-		@suggestions = @user.suggestions
+		@suggestions = @user.suggestions.order('id DESC').paginate(:page => params[:page], :per_page => 5)
 	end
 
 
