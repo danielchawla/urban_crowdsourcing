@@ -6,7 +6,7 @@ class SuggestionsController < ApplicationController
 	before_action :load_new_suggestion, :only => [:index, :new]
 
 	def index
-		@suggestions = Suggestion.all.order('id DESC').paginate(:page => params[:page], :per_page => 3)
+		@suggestions = Suggestion.all.order('id DESC').paginate(:page => params[:page], :per_page => 5)
 		@suggestion_pins = Gmaps4rails.build_markers(Suggestion.all.geocoded) do |suggestion, marker|
   			marker.lat suggestion.lat
   			marker.lng suggestion.lon

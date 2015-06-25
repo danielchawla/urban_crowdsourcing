@@ -7,51 +7,41 @@
 <br/>
 <br/>
 
+
 <div class="container">
+    <div class="col-md-12">
+        <div class="col-md-8">
+            <a href="#map_menu">See Map View</a>
+            <br/>
+            <br/>
+            <br/>
 
-    <!-- Button to create new suggestion -->
-    <div class="suggestion_button">
-    	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Create A New Suggestion</button>
-    	<div class="collapse" id="collapseExample">
-    		<div class="well">
-    			<%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
-    		</div>
-    	</div>
-<!--     <br/>
-    <div class="modal fade" id="suggestion_modal">
+            <!-- Button to create new suggestion -->
+            <div class="suggestion_button">
+            	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Create A New Suggestion</button>
+            	<div class="collapse" id="collapseExample">
+            		<div class="well">
+            			<%= render :partial => 'form', :locals => {:suggestion => @suggestion} %>
+            		</div>
+            	</div>
+            </div>
+
+
+            <br/>
+            <%= render @suggestions %>
+            <br/> 
+
+            <%= will_paginate @suggestions %>
+            <br/>
+        </div>
     </div>
-
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Create a New Suggestion</h4>
-          </div>
-          <div class="modal-body">
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#suggestion_modal" >Create A New Suggestion</button> --> 
-
-    <br/>
-    <br/>
-
-    <%= render @suggestions %>
-    <!-- <ul>
-    	<% @suggestions.each do |suggestion| %>
-    		<li><%=render partial: "suggestion", locals: {suggestion: suggestion}%><br/>
-    	<% end %>
-    </ul> -->
-    <br/> 
-
-    <%= will_paginate @suggestions %>
-    <br/>
 </div>
-        <div class="text-center">
-            <h1>Suggestion Map</h1>
-            <hr class="small">
-        </div>
+
+<div class="container">
+    <div id="map_menu" class="text-center">
+        <h1>Map View</h1>
+        <hr class="small">
+    </div>
 </div>
  
         <div id='maap'>
@@ -79,8 +69,6 @@
         <script type="text/javascript">
             go();
         window.addEventListener('resize', go);
-
-
 
 
 

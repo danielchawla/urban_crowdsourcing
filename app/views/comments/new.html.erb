@@ -1,9 +1,19 @@
-NEW COMMENT
+<header id="top" class="header_others bg-primary">
+    <div class="row text-center">
+        <h1>New Comment</h1>
+    </div>
+</header>
 
-<%= form_for @comment, url: suggestion_comments_path do |f| %>
-  <%= f.label :text %>:
-  <%= f.text_field :text %><br />
+<div class="container">
+	<div class="row text-center">
+	<br/>
+	<br/>
+	<%= form_for @comment, url: suggestion_comments_path do |f| %>
+	  <%= f.label :text %>:
+	  <%= f.text_field :text %><br />
 
-  <br/>
-  <%= f.submit %>
-<% end %>
+	  <br/>
+	  <%= f.submit %>
+	<% end %>
+	</div>
+</div>

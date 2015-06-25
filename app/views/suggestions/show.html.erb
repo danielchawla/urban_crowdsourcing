@@ -1,2 +1,15 @@
-<%= render partial: 'suggestion', :locals => {:suggestion => @suggestion}  %>
-<%= link_to 'Back', session[:last_suggestion_page] %>
+
+
+<header id="top" class="header_others bg-primary">
+    <div class="row text-center">
+        <h1>Suggestion</h1>
+    </div>
+</header>
+
+<div class="container">
+	<br/>
+	<%= link_to 'Back', session[:last_suggestion_page] %>
+	<br/>
+
+	<%= render partial: 'suggestion', :locals => {:suggestion => @suggestion}  %>
+</div>
