@@ -7,7 +7,7 @@
 
 <div class="container">
 	<div class="row">
-		<div id="account_sidebar" class="col-md-3">
+		<div id="account_sidebar" class="col-sm-3">
 			<div id="profile">
 				<h2>Account Info</h2>
 				<div><strong>Name:</strong> <%= @user.first_name %> <%= @user.last_name %></div>
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-9">
+		<div class="col-sm-9 col-sm-offset-3">
 			<h2>Your Suggestions</h2>
 			<div id="user_suggestions">
 				<% @suggestions.each do |suggestion| %>

@@ -69,10 +69,15 @@ hr.small {
 
 /* Side Menu */
 
+#menu-toggle{
+    z-index: 1000;
+}
+
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
     right: 0;
+    top: 0;
     width: 250px;
     height: 100%;
     margin-right: -250px;
@@ -86,7 +91,6 @@ hr.small {
 }
 
 .sidebar-nav {
-    z-index: 10;
     position: absolute;
     top: 0;
     width: 250px;
@@ -96,13 +100,11 @@ hr.small {
 }
 
 .sidebar-nav li {
-    z-index: 10;
     text-indent: 20px;
     line-height: 40px;
 }
 
 .sidebar-nav li a {
-    z-index: 10;
     display: block;
     text-decoration: none;
     color: #999;
@@ -117,12 +119,10 @@ hr.small {
 
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
-    z-index: 10;
     text-decoration: none;
 }
 
 .sidebar-nav > .sidebar-brand {
-    z-index: 10;
     height: 55px;
     font-size: 18px;
     line-height: 55px;

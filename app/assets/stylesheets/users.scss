@@ -1,3 +1,11 @@
 #account_sidebar {
-	float: left;
+	// float: left;
+	position: fixed;
+}
+
+@media(max-width:767px) {
+    #account_sidebar {
+    	position: relative;
+    }
+
 }

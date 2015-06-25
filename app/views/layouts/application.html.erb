@@ -58,18 +58,6 @@
 	            <li>
 	                <a href="/" onclick = $("#menu-close").click(); >Home</a>
 	            </li>
-	            <li>
-<!-- 	                <a href="/#about" onclick = $("#menu-close").click(); >About</a>
-	            </li>
-	            <li>
-	                <a href="/#latest-suggestions" onclick = $("#menu-close").click(); >Lastest Suggestions</a>
-	            </li> -->
-<!-- 	            <li>
-	                <a href="/#our-team" onclick = $("#menu-close").click(); ></a>
-	            </li> -->
-<!-- 	            <li>
-	                <a href="/#contact" onclick = $("#menu-close").click(); >Suggestions Map</a>
-	            </li> -->
 	           	<li>
 	                <a href="/suggestions" onclick = $("#menu-close").click(); >Suggestions</a>
 	            </li>
@@ -87,27 +75,10 @@
 	            <%end%>
 	        </ul>
 	    </nav>
+		
 
+		<%= yield %> 
 
-		<!-- Import content from other places with yield -->
-		<% if params[:controller] != "main" %>
-<!-- 			<header id="top" class="section bg-primary">
-			    <div class="container">
-			        <div class="row text-center">
-			            <h2><%= params[:controller].titlecase.singularize %></h2>
-			        </div>
-			    </div>
-			</header>
-			<br/> -->
-<!-- 			<section id="yield" class="yield"> -->
-			    <!-- <div class="container"> -->
-        <% end %>
-        					<!-- All content but main controller is in between <div id="yield"> -->
-							<%= yield %> 
-		<% if params[:controller] != "main" %>
-			    <!-- </div> -->
-	<!-- 		</section> -->
-        <% end %>
 
 	    <!-- Footer -->
 	    <footer>
