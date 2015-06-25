@@ -1,15 +1,10 @@
 class SuggestionsController < ApplicationController
-	
-	
-
 
 	before_action :authenticate_user!, :only => [:new, :create]
 	before_action :load_suggestions, :only => [:index, :create]
 	before_action :load_new_suggestion, :only => [:index, :new]
 
 	def index
-
-
 		if !(current_user.try(:admin?))
   			#suggestion_collection = Suggestion.all.where(:approved => true)
 			@suggestions = Suggestion.all.where(:approved => true).order('id DESC').paginate(:page => params[:page], :per_page => 5)
@@ -39,7 +34,7 @@ class SuggestionsController < ApplicationController
 		@suggestion.user = current_user
 		if @suggestion.save
 
-			redirect_to '/suggestions'
+			redirect_to '/suggestions', notice: "Suggestion successfully created! Pending admin approval."
 		else
 			render :new
 		end	
