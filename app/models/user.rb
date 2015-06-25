@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-
+acts_as_voter
 
 	has_many :suggestions, :dependent => :destroy
   has_many :comments #TODO: make dependency look good

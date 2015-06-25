@@ -95,6 +95,11 @@ class SuggestionsController < ApplicationController
  		redirect_to suggestions_path
  	end
 
+ 	def vote
+  		@suggestion = Suggestion.find(params[:id])
+  		@suggestion.liked_by current_user
+  		redirect_to request.env['HTTP_REFERER']
+	end
 	
 
 	private

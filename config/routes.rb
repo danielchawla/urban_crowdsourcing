@@ -33,7 +33,7 @@ Rails.application.routes.draw do
        #get :approve
        put :approve, as: :approve
        delete :destroy, as: :delete
-
+       put :vote, as: :vote
 
     end   
    end
