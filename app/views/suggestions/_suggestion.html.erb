@@ -29,6 +29,7 @@ Likes: <%=suggestion.votes_for.size%><br/>
 	<%=link_to('Like', vote_suggestion_path(suggestion), :method => :put)%><br/>
 <%end%>
 <%end%>
+<br/>
 
 <%if !suggestion.comments.empty?%>
 <strong>Comments:</strong><br/>
