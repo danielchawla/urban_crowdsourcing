@@ -25,10 +25,10 @@
 /* About */
 
 .about {
-    background: url(/assets/callout.jpg) no-repeat center center scroll;
-    color: white;
-    // background: white;
-    padding: 30px 0;
+    // background: url(/assets/tr.jpg) no-repeat center center scroll;
+    color: black;
+    // background: rgb(192,226,195);
+    padding: 30px 80px;
     h1{
         font-size: 36px;
     }
@@ -38,7 +38,7 @@
 }
 
 .latest-suggestions {
-    padding: 120px 0 30px 0;
+    padding: 30px 0;
     h1{
         font-size: 36px;
     }
@@ -75,10 +75,11 @@
 .callout {
     display: table;
     width: 100%;
-    height: 200px;
+    height: 300px;
     padding: 30px;
     color: #fff;
-    // background: url(/assets/fr.jpg) no-repeat center center scroll;
+    background: white;
+    // background: url(/assets/callout.jpg) no-repeat center center scroll;
     color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -114,5 +115,5 @@
 
 .map {
     height: 500px;
-    padding-top: 20px;
+    // padding-top: 20px;
 }
