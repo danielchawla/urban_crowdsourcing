@@ -25,9 +25,10 @@
 /* About */
 
 .about {
-    color: black;
-    background: white;
-    padding: 50px 0;
+    background: url(/assets/callout.jpg) no-repeat center center scroll;
+    color: white;
+    // background: white;
+    padding: 30px 0;
     h1{
         font-size: 36px;
     }
@@ -37,7 +38,7 @@
 }
 
 .latest-suggestions {
-    padding: 50px 0;
+    padding: 120px 0 30px 0;
     h1{
         font-size: 36px;
     }
@@ -65,7 +66,7 @@
     
     p {
         font-size: 20px;
-        text-align: left;
+        // text-align: left;
     }
 }
 
@@ -78,7 +79,7 @@
     padding: 30px;
     color: #fff;
     // background: url(/assets/fr.jpg) no-repeat center center scroll;
-    color: white;
+    color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
